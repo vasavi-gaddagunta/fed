@@ -1,0 +1,131 @@
+<html>
+<head>
+     <script>
+			function validate(){
+				var fn=document.register.Name.value;
+				var ln=document.register.Dof.value;
+				var mn=document.register.mail.value;
+				var cnry=document.register.phno.value;
+				var cn=document.register.country.value;
+				var c=document.register.city.value;
+				var l=document.register.Gender.value;
+				var le=document.register.time.value;
+				var ls=document.register.interested.value;
+				if(fn==""){
+					alert("please enter your  name");
+					document.register.Name.focus();
+					return false;
+				}
+				if(ln==""){
+					alert("please enter your date of birth");
+					document.register.Dof.focus();
+					return false;
+				}
+				if(mn==""){
+					alert("please enter your mail");
+					document.register.mail.focus();
+					return false;
+				}
+				if(cnry==""){
+					alert("please select your mobile number");
+					document.register.phno.focus();
+					return false;
+				}
+				if(cn==""){
+					alert("please enter your country");
+					document.register.country.focus();
+					return false;
+				}
+				if(c==""){
+					alert("please enter your city");
+					document.register.city.focus();
+					return false;
+				}
+				if(l==""){
+					alert("please enter your gender");
+					document.register.Gender.focus();
+					return false;
+				}
+				if(le==""){
+					alert("please confim your time");
+					document.register.time.focus();
+					return false;
+				}
+				if(ls==""){
+					alert("please confim your intrested");
+					document.register.interested.focus();
+					return false;
+				}
+				
+				alert("login successful");
+				return true;
+				
+			}
+		</script>
+<style>
+body{
+background-image:url('vava.jpg');
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
+}
+</style>
+</head>
+<body>
+<ul><li><a href="index.html"><h3>Home</h3></a></li></ul>
+<font size=8>
+<h1><center>COFFEE SHOP</center></h1>
+</font>
+<center><h1>Registration For Table</h1></center>
+<form action="insert.jsp" onsubmit="return validate()" name="register">
+<center>
+<label for="name">Name &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </label>
+<input type="text" id="Name" name="Name"><br><br>
+<label for="dob">Dof&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+<input type="date"  id="Dof" name="Dof"><br><br>
+<label for="mail">mail&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</label>
+<input type="email" id="mail" name="mail"><br><br>
+<label for="phno">Phno</label>
+<input type="tel" id="phno" name="phno"><br><br> 
+<label for="Table">country</label> 
+
+<select name="country">
+<option></option>
+<option>India</option>
+<option>America</option>
+<option>Australia</option>
+<option>Africa</option>
+</select><br><br
+<label for="Table">city</label>
+<select name="city">
+<option></option>
+<option>benglore</option>
+<option>hyderabad</option>
+<option>misore</option>
+</select><br><br>
+<label for="Table">Gender</label> 
+<select name="Gender">
+<option></option>
+<option>male</option>
+<option>female</option>
+</select><br><br>
+<label for="Table">time</label> 
+<select name="time">
+<option></option>
+<option>morning</option>
+<option>afternoon</option>
+</select><br><br>
+<label for="ask1">interested</label>
+<input type="date" id="interested"><br><br>
+<label for="table">table&nbsp &nbsp &nbsp </label>
+<select name="table">
+<option>class1 table</option>
+<option>class2 table</option>
+<option>class3 table</option>
+<option>class 4 table</option>
+</select><br><br>
+</center>
+<center><input type="submit"></center>
+</form>
+</body>
+</html>
